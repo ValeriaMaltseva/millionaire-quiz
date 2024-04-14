@@ -1,0 +1,33 @@
+@import './breakpoints';
+
+@mixin h1 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 37.12px;
+
+  @include tablet {
+    font-size: 44px;
+    line-height: 51.04px;
+  }
+
+  @include desktop {
+    font-size: 56px;
+    line-height: 64.96px;
+  }
+}
+
+@mixin p1 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20.88px;
+
+  @include tablet {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  @include desktop {
+    font-size: 32px;
+    line-height: 37.12px;
+  }
+}
