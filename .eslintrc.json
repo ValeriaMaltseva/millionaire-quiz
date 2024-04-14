@@ -1,5 +1,6 @@
 {
   "extends": [
+    "next",
     "airbnb",
     "airbnb/hooks",
     "airbnb-typescript",
@@ -10,5 +11,9 @@
   "parserOptions": {
     "ecmaVersion": "latest",
     "project": "./tsconfig.json"
+  },
+  "rules": {
+    "import/prefer-default-export": 0,
+    "no-restricted-exports": 0
   }
 }

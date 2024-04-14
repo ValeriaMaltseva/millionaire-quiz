@@ -1,0 +1,134 @@
+[
+  {
+    "id": "10",
+    "text": "Who is considered the national poet of Ukraine?",
+    "answers": [
+      { "text": "Lesia Ukrainka", "correct": false },
+      { "text": "Ivan Kotlyarevsky", "correct": false },
+      { "text": "Taras Shevchenko", "correct": true },
+      { "text": "Ivan Franko", "correct": false }
+    ],
+    "score": 250000
+  },
+  {
+    "id": "1",
+    "text": "What does JSON stand for?",
+    "answers": [
+      { "text": "JavaScript Object Navigator", "correct": false },
+      { "text": "JavaScript Oriented Donation", "correct": false },
+      { "text": "JavaScript Object Notation", "correct": true },
+      { "text": "JavaScript Online Notation", "correct": false }
+    ],
+    "score": 500
+  },
+  {
+    "id": "3",
+    "text": "Which music genre originated in Jamaica and features offbeat rhythms and emphasis on the bassline?",
+    "answers": [
+      { "text": "Salsa", "correct": false },
+      { "text": "Jazz", "correct": false },
+      { "text": "Reggae", "correct": true },
+      { "text": "Hip-hop", "correct": false }
+    ],
+    "score": 2000
+  },
+  {
+    "id": "5",
+    "text": "Who is the creator of React?",
+    "answers": [
+      { "text": "Mark Zuckerberg", "correct": false },
+      { "text": "Ivan Franko", "correct": false },
+      { "text": "Ryan Dahl", "correct": false },
+      { "text": "Jordan Walke", "correct": true }
+    ],
+    "score": 8000
+  },
+  {
+    "id": "6",
+    "text": "What is the capital of Ukraine?",
+    "answers": [
+      { "text": "Dnipro", "correct": false },
+      { "text": "Zhytomyr", "correct": false },
+      { "text": "Kyiv", "correct": true },
+      { "text": "Kharkiv", "correct": false }
+    ],
+    "score": 16000
+  },
+  {
+    "id": "7",
+    "text": "What is the official language of Switzerland?",
+    "answers": [
+      { "text": "German", "correct": true },
+      { "text": "French", "correct": true },
+      { "text": "Ukrainian", "correct": false },
+      { "text": "Italian", "correct": true }
+    ],
+    "score": 32000
+  },
+  {
+    "id": "4",
+    "text": "Which European mountain range is known as the \"Roof of Europe\"?",
+    "answers": [
+      { "text": "Carpathians", "correct": false },
+      { "text": "Pyrenees", "correct": false },
+      { "text": "Alps", "correct": true },
+      { "text": "Dolomites", "correct": false }
+    ],
+    "score": 4000
+  },
+  {
+    "id": "12",
+    "text": "What is the most beautiful Ukrainian city?",
+    "answers": [
+      { "text": "Kyiv", "correct": true },
+      { "text": "Lviv", "correct": true },
+      { "text": "Odesa", "correct": true },
+      { "text": "Kharkiv", "correct": true }
+    ],
+    "score": 1000000
+  },
+  {
+    "id": "2",
+    "text": "Which Ukrainian football club won the UEFA Cup (now known as the UEFA Europa League) in the 2008-2009 season?",
+    "answers": [
+      { "text": "Shakhtar Donetsk", "correct": true },
+      { "text": "Dynamo Kyiv", "correct": false },
+      { "text": "Metalist Kharkiv", "correct": false },
+      { "text": "Dnipro", "correct": false }
+    ],
+    "score": 1000
+  },
+  {
+    "id": "9",
+    "text": "Which ancient city, located in Jordan, is famous for its rock-cut architecture and intricate water conduit system?",
+    "answers": [
+      { "text": "Angkor Wat", "correct": false },
+      { "text": "Petra", "correct": true },
+      { "text": "The Great Wall of China", "correct": false },
+      { "text": "Machu Picchu", "correct": false }
+    ],
+    "score": 125000
+  },
+  {
+    "id": "11",
+    "text": "What historic event is celebrated on August 24th in Ukraine?",
+    "answers": [
+      { "text": "Independence Day", "correct": true },
+      { "text": "Constitution Day", "correct": false },
+      { "text": "Victory Day", "correct": false },
+      { "text": "Unity Day", "correct": false }
+    ],
+    "score": 500000
+  },
+  {
+    "id": "8",
+    "text": "Which hook does not exist in React?",
+    "answers": [
+      { "text": "useDebugValue", "correct": false },
+      { "text": "useOptimistic", "correct": false },
+      { "text": "useId", "correct": false },
+      { "text": "useLayoutDefect", "correct": true }
+    ],
+    "score": 64000
+  }
+]
