@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react';
+import cx from 'classnames';
 
 import { useGame } from '@/hooks/useGame';
 import AnswerOption from '@/components/AnswerOption';
@@ -9,7 +10,11 @@ import styles from './Question.module.scss';
 const SHOW_RESULTS_TIMEOUT = 1000;
 const VERIFY_ANSWER_TIMEOUT = 2000;
 
-function Question() {
+type Props = {
+    className?: string;
+};
+
+function Question({ className }: Props) {
     const { questions, currentQuestionIndex, toNextQuestion, toGameOver } = useGame();
 
     const [selectedAnswer, setSelectedAnswer] = useState<Answer | null>(null);
@@ -43,7 +48,7 @@ function Question() {
     );
 
     return (
-        <section className={styles.root}>
+        <section className={cx(styles.root, className)}>
             <h2>{currentQuestion.text}</h2>
             <div className={styles.answers}>
                 {currentQuestion.answers.map((answer) => {

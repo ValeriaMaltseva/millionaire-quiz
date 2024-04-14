@@ -6,11 +6,15 @@ import { USDFormatter } from '@/utils/currency';
 
 import styles from './Sidebar.module.scss';
 
-function Sidebar() {
+type Props = {
+    className?: string;
+};
+
+function Sidebar({ className }: Props) {
     const game = useGame();
 
     return (
-        <section className={styles.root}>
+        <section className={cx(styles.root, className)}>
             {game.questions.map(({ id, score }, index) => (
                 <div
                     key={id}
