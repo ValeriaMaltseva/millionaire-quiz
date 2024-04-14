@@ -14,6 +14,7 @@
   },
   "rules": {
     "import/prefer-default-export": 0,
-    "no-restricted-exports": 0
+    "no-restricted-exports": 0,
+    "react/require-default-props": 0
   }
 }

@@ -1,0 +1,26 @@
+@import '@/styles/breakpoints';
+@import '@/styles/variables';
+
+.root {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 5px;
+}
+
+.scoreItem {
+  width: 200px;
+  text-align: center;
+  color: $black-100;
+  border: 1px solid $black-40;
+  user-select: none;
+
+  &.active {
+    color: $orange-100;
+    border-color: $orange-100;
+  }
+
+  &.inactive {
+    color: $black-40;
+  }
+}

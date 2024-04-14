@@ -3,6 +3,10 @@
 import React, { useLayoutEffect } from 'react';
 
 import { useGame } from '@/hooks/useGame';
+
+import Question from './components/Question';
+import Sidebar from './components/Sidebar';
+
 import styles from './Game.module.scss';
 
 function Game() {
@@ -15,24 +19,10 @@ function Game() {
     }, []);
 
     return (
-        <section className={styles.root}>
-            {game.questions.map((question) => (
-                <div key={question.id}>{question.text}</div>
-            ))}
-            <div style={{ marginTop: 100 }}>
-                <div>Current Question: {game.questions[game.currentQuestionIndex].text}</div>
-                <div>Fight for score: {game.questions[game.currentQuestionIndex].score}</div>
-                <div>Current Score: {game.currentScore}</div>
-            </div>
-            <div>
-                <button type="button" onClick={game.toNextQuestion}>
-                    Next
-                </button>
-                <button type="button" onClick={game.toGameOver}>
-                    Finish
-                </button>
-            </div>
-        </section>
+        <main className={styles.root}>
+            <Question />
+            <Sidebar />
+        </main>
     );
 }
 

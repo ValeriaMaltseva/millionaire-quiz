@@ -1,0 +1,47 @@
+@import '@/styles/variables';
+
+@keyframes blink {
+  0%, 50% {
+    background-color: $green-5;
+  }
+  51%, 100% {
+    background-color: $white-100;
+  }
+}
+
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 288px;
+  height: 56px;
+  text-align: center;
+  color: $black-100;
+  border: 1px solid $black-40;
+  background: $white-100;
+  cursor: pointer;
+
+  &.selected {
+    background: $orange-5;
+    border-color: $orange-100;
+  }
+
+  &.correct {
+    background: $green-5;
+    border-color: $green-100;
+    animation: blink 0.3s 3;
+  }
+
+  &.wrong {
+    background: $red-5;
+    border-color: $red-100;
+  }
+
+  &.disabled {
+    pointer-events: none;
+  }
+
+  &:hover {
+    border-color: $orange-100;
+  }
+}
