@@ -54,7 +54,7 @@ const Question = ({ className }: Props) => {
     return (
         <section className={cx(styles.root, className)}>
             <h2 className={styles.questionTitle}>{currentQuestion.text}</h2>
-            <div className={styles.answers} key={currentQuestion.id}>
+            <div className={styles.answers}>
                 {currentQuestion.answers.map((answer, index) => {
                     const isSelected = selectedAnswer === answer;
 

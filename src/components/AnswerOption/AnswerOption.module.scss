@@ -23,13 +23,16 @@ $option-line-width: 17px;
   background: none;
   -webkit-tap-highlight-color: transparent;
 
-  &:hover {
-    path {
-      stroke: $orange-100;
-    }
+  // Only for hover supported devices
+  @media not all and (pointer: coarse) {
+    &:hover {
+      path {
+        stroke: $orange-100;
+      }
 
-    .line {
-      background-color: $orange-100;
+      .line {
+        background-color: $orange-100;
+      }
     }
   }
 

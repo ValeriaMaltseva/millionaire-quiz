@@ -4,6 +4,7 @@
 
 .root {
   height: 100vh;
+  max-height: -webkit-fill-available;
   background: linear-gradient(to bottom right, $white-100 50%, $orange-5 50%);
 }
 

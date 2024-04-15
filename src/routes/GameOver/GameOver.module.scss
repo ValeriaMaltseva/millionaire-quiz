@@ -4,6 +4,7 @@
 
 .root {
   height: 100vh;
+  max-height: -webkit-fill-available;
   background-color: $black-5;
 }
 
