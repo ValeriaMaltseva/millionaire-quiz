@@ -13,8 +13,10 @@ type Props = React.PropsWithChildren<{
 const Modal = ({ onClose, children, isOpen }: Props) => {
     return (
         <div className={cx(styles.root, { [styles.isOpen]: isOpen })}>
-            <CloseIcon onClick={onClose} className={styles.closeIcon} />
-            {children}
+            <div className={styles.header}>
+                <CloseIcon onClick={onClose} className={styles.closeIcon} />
+            </div>
+            <div className={styles.content}>{children}</div>
         </div>
     );
 };

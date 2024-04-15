@@ -4,9 +4,14 @@
 .root {
   position: relative;
   display: flex;
+  flex-direction: column;
   height: 100vh;
   background-color: $black-5;
   overflow-x: hidden;
+
+  @include tablet {
+    flex-direction: row;
+  }
 }
 
 .question {
@@ -24,14 +29,22 @@
   }
 }
 
-.burger {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  width: 24px;
-  height: 24px;
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px;
+  background-color: $black-5;
+  z-index: 10;
 
   @include tablet {
     display: none;
   }
+}
+
+.burger {
+  width: 24px;
+  height: 24px;
 }

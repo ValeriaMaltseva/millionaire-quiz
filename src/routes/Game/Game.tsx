@@ -25,7 +25,9 @@ const Game = () => {
 
     return (
         <main className={styles.root}>
-            <MenuIcon className={styles.burger} onClick={open} />
+            <div className={styles.header}>
+                <MenuIcon className={styles.burger} onClick={open} />
+            </div>
 
             <Question className={styles.question} />
             <Sidebar className={styles.sidebar} />

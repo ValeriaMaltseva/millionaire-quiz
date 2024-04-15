@@ -4,7 +4,6 @@
 .root {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 100px;
 
@@ -18,6 +17,7 @@
 .questionTitle {
   @include p1;
 
+  margin-top: auto;
   padding: 0 16px;
   text-align: center;
 
@@ -31,6 +31,8 @@
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px 34px;
+  margin-bottom: auto;
+  padding-bottom: 40px;
 
   @include tablet {
     padding: 0 16px;
