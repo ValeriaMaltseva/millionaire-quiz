@@ -6,11 +6,11 @@
   width: 100vw;
   height: 100vh;
   background: $white-100;
-  transition: 0.3s all ease-in-out;
-  transform: translateX(100%);
+  transition: 0.3s left ease-in-out;
+  left: 100%;
 
   &.isOpen {
-    transform: translateX(0);
+    left: 0;
   }
 
   @include tablet {

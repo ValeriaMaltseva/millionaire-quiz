@@ -1,47 +1,132 @@
+@import '@/styles/breakpoints';
 @import '@/styles/variables';
+
+$option-width-mobile: 288px;
+$option-width-desktop: 389px;
+$option-height-mobile: 56px;
+$option-height-desktop: 72px;
+$option-line-width: 17px;
 
 @keyframes blink {
   0%, 50% {
-    background-color: $green-5;
+    fill: $green-5;
   }
   51%, 100% {
-    background-color: $white-100;
+    fill: $white-100;
   }
 }
 
 .root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 288px;
-  height: 56px;
-  text-align: center;
-  color: $black-100;
-  border: 1px solid $black-40;
-  background: $white-100;
-  cursor: pointer;
+  position: relative;
+  outline: none;
+  border: none;
+  background: none;
+
+  &:hover {
+    path {
+      stroke: $orange-100;
+    }
+
+    .line {
+      background-color: $orange-100;
+    }
+  }
 
   &.selected {
-    background: $orange-5;
-    border-color: $orange-100;
+    path {
+      fill: $orange-5;
+      stroke: $orange-100;
+    }
+
+    .line {
+      background-color: $orange-100;
+    }
   }
 
   &.correct {
-    background: $green-5;
-    border-color: $green-100;
-    animation: blink 0.3s 3;
+    path {
+      fill: $green-5;
+      stroke: $green-100;
+      animation: blink 0.3s 3;
+    }
+
+    .line {
+      background-color: $green-100;
+    }
   }
 
   &.wrong {
-    background: $red-5;
-    border-color: $red-100;
+    path {
+      fill: $red-5;
+      stroke: $red-100;
+    }
+
+    .line {
+      background-color: $red-100;
+    }
   }
 
   &.disabled {
     pointer-events: none;
   }
+}
 
-  &:hover {
-    border-color: $orange-100;
+.option {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: $option-width-mobile;
+  height: $option-height-mobile;
+  color: $black-100;
+  cursor: pointer;
+  z-index: 2;
+
+  @include desktop {
+    width: $option-width-desktop;
+    height: $option-height-desktop;
   }
+}
+
+.line {
+  position: absolute;
+  top: calc(($option-height-mobile / 2) - 0.5px);
+  left: -$option-line-width;
+  width: calc($option-width-mobile + ($option-line-width * 2));
+  height: 1px;
+  background-color: $black-40;
+  z-index: 1;
+
+  @include desktop {
+    width: calc($option-width-desktop + ($option-line-width * 2));
+    top: calc(($option-height-desktop / 2) - 0.5px);
+  }
+}
+
+.optionTextContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 20px;
+  width: 100%;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.optionLetter {
+  margin-right: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: $orange-100;
+}
+
+.optionText {
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-100;
 }

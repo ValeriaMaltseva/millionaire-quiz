@@ -2,9 +2,13 @@ import React, { useCallback, useState } from 'react';
 import cx from 'classnames';
 
 import { useGame } from '@/hooks/useGame';
+
 import AnswerOption from '@/components/AnswerOption';
 
+import { getLetterByIndex } from '@/utils/letters';
+
 import { Answer } from '@/types';
+
 import styles from './Question.module.scss';
 
 const SHOW_RESULTS_TIMEOUT = 1000;
@@ -51,7 +55,7 @@ function Question({ className }: Props) {
         <section className={cx(styles.root, className)}>
             <h2 className={styles.questionTitle}>{currentQuestion.text}</h2>
             <div className={styles.answers}>
-                {currentQuestion.answers.map((answer) => {
+                {currentQuestion.answers.map((answer, index) => {
                     const isSelected = selectedAnswer === answer;
 
                     return (
@@ -62,6 +66,7 @@ function Question({ className }: Props) {
                             correct={isShowResult && answer.correct}
                             wrong={isShowResult && isSelected && !answer.correct}
                             disabled={!!selectedAnswer}
+                            letter={getLetterByIndex(index)}
                         >
                             {answer.text}
                         </AnswerOption>
