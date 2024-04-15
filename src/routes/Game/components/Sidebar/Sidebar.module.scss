@@ -6,7 +6,8 @@
   flex-direction: column-reverse;
   align-items: center;
   gap: 7px;
-  height: 100%;
+  height: 100vh;
+  max-height: -webkit-fill-available;
   padding: 40px 0;
   overflow-y: auto;
   background-color: $black-5;
