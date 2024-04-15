@@ -13,15 +13,15 @@ import { INITIAL_SCORE, INITIAL_QUESTION_INDEX } from './GameProvider.const';
 function GameProvider({ children }: React.PropsWithChildren) {
     const router = useRouter();
 
-    // ===== Sorted questions ==== //
+    // Sorted questions
     const questions: Array<Question> = useMemo(() => questionsData.sort((a, b) => a.score - b.score), []);
 
-    // ===== State ==== //
+    // State
     const [isFinished, setIsFinished] = useState(false);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(INITIAL_QUESTION_INDEX);
     const [currentScore, setCurrentScore] = useState(INITIAL_SCORE);
 
-    // ===== Handlers ==== //
+    // Handlers
     const init = useCallback(() => {
         setIsFinished(false);
         setCurrentQuestionIndex(INITIAL_QUESTION_INDEX);

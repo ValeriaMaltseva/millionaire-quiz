@@ -13,7 +13,7 @@ import { ReactComponent as MenuIcon } from './img/menu.svg';
 
 import styles from './Game.module.scss';
 
-function Game() {
+const Game = () => {
     const game = useGame();
     const { isOpen, open, close } = useModal();
 
@@ -35,6 +35,6 @@ function Game() {
             </Modal>
         </main>
     );
-}
+};
 
-export default React.memo(Game);
+export default Game;

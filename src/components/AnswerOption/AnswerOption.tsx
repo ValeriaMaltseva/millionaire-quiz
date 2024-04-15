@@ -15,7 +15,7 @@ type Props = React.PropsWithChildren<{
     onClick?: () => void;
 }>;
 
-function AnswerOption({ onClick, selected, correct, wrong, disabled, letter, children }: Props) {
+const AnswerOption = ({ onClick, selected, correct, wrong, disabled, letter, children }: Props) => {
     return (
         <button
             type="button"
@@ -35,6 +35,6 @@ function AnswerOption({ onClick, selected, correct, wrong, disabled, letter, chi
             </div>
         </button>
     );
-}
+};
 
 export default React.memo(AnswerOption);

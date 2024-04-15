@@ -18,7 +18,7 @@ type Props = {
     className?: string;
 };
 
-function Question({ className }: Props) {
+const Question = ({ className }: Props) => {
     const { questions, currentQuestionIndex, toNextQuestion, toGameOver } = useGame();
 
     const [selectedAnswer, setSelectedAnswer] = useState<Answer | null>(null);
@@ -75,6 +75,6 @@ function Question({ className }: Props) {
             </div>
         </section>
     );
-}
+};
 
 export default React.memo(Question);

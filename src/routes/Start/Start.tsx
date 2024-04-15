@@ -10,7 +10,7 @@ import { ReactComponent as HandIcon } from './img/hand.svg';
 
 import styles from './Start.module.scss';
 
-function Start() {
+const Start = () => {
     return (
         <section className={styles.root}>
             <div className={styles.container}>
@@ -26,6 +26,6 @@ function Start() {
             </div>
         </section>
     );
-}
+};
 
-export default React.memo(Start);
+export default Start;

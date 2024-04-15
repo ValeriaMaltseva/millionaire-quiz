@@ -11,7 +11,7 @@ type Props = React.PropsWithChildren<{
     inactive?: boolean;
 }>;
 
-function ScoreOption({ active, inactive, children }: Props) {
+const ScoreOption = ({ active, inactive, children }: Props) => {
     return (
         <button
             type="button"
@@ -25,6 +25,6 @@ function ScoreOption({ active, inactive, children }: Props) {
             <div className={styles.optionText}>{children}</div>
         </button>
     );
-}
+};
 
 export default React.memo(ScoreOption);

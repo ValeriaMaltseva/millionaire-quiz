@@ -12,7 +12,7 @@ type Props = {
     className?: string;
 };
 
-function Sidebar({ className }: Props) {
+const Sidebar = ({ className }: Props) => {
     const game = useGame();
 
     return (
@@ -28,6 +28,6 @@ function Sidebar({ className }: Props) {
             ))}
         </section>
     );
-}
+};
 
 export default React.memo(Sidebar);

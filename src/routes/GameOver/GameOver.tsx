@@ -15,7 +15,7 @@ import { ReactComponent as HandIcon } from './img/hand.svg';
 
 import styles from './GameOver.module.scss';
 
-function GameOver() {
+const GameOver = () => {
     const router = useRouter();
     const game = useGame();
 
@@ -46,6 +46,6 @@ function GameOver() {
             </section>
         )
     );
-}
+};
 
-export default React.memo(GameOver);
+export default GameOver;
