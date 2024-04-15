@@ -1,11 +1,38 @@
 @import '@/styles/breakpoints';
+@import '@/styles/typography';
 
 .root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 
+  @include desktop {
+    padding: 80px;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+}
+
+.questionTitle {
+  @include p1;
+
+  padding: 0 16px;
+  text-align: center;
+
+  @include desktop {
+    text-align: left;
+  }
 }
 
 .answers {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+
+  @include tablet {
+    padding: 0 16px;
+  }
 }
