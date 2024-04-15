@@ -2,7 +2,10 @@
 @import '@/styles/variables';
 
 .root {
+  position: relative;
   display: flex;
+  height: 100vh;
+  background-color: $black-5;
 }
 
 .question {
@@ -21,10 +24,11 @@
 }
 
 .burger {
-  flex: none;
-  width: 20px;
-  height: 20px;
-  background: red;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 24px;
+  height: 24px;
 
   @include tablet {
     display: none;

@@ -9,6 +9,8 @@ import Modal from '@/components/Modal';
 import Question from './components/Question';
 import Sidebar from './components/Sidebar';
 
+import { ReactComponent as MenuIcon } from './img/menu.svg';
+
 import styles from './Game.module.scss';
 
 function Game() {
@@ -23,18 +25,14 @@ function Game() {
 
     return (
         <main className={styles.root}>
-            {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
-            <button type="button" className={styles.burger} onClick={open} />
+            <MenuIcon className={styles.burger} onClick={open} />
 
             <Question className={styles.question} />
             <Sidebar className={styles.sidebar} />
 
-            {/* Render sidebar for mobile */}
-            {isOpen && (
-                <Modal onClose={close}>
-                    <Sidebar />
-                </Modal>
-            )}
+            <Modal onClose={close} isOpen={isOpen}>
+                <Sidebar />
+            </Modal>
         </main>
     );
 }
