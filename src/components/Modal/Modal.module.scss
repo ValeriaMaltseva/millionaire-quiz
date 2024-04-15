@@ -8,6 +8,7 @@
   background: $white-100;
   transition: 0.3s left ease-in-out;
   left: 100%;
+  z-index: 5;
 
   &.isOpen {
     left: 0;

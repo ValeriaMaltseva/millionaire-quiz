@@ -1,0 +1,84 @@
+@import '@/styles/breakpoints';
+@import '@/styles/variables';
+
+$option-width-mobile: 240px;
+$option-height-mobile: 32px;
+$option-height-desktop: 40px;
+
+.root {
+  position: relative;
+  width: 100%;
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 0;
+
+  &.active {
+    path {
+      stroke: $orange-100;
+    }
+
+    .optionText {
+      color: $orange-100;
+    }
+
+    .line {
+      background-color: $orange-100;
+    }
+  }
+
+  &.inactive {
+    path {
+      stroke: $black-40;
+    }
+
+    .optionText {
+      color: $black-40;
+    }
+
+    .line {
+      background-color: $black-40;
+    }
+  }
+}
+
+.option {
+  position: relative;
+  width: $option-width-mobile;
+  height: $option-height-mobile;
+  color: $black-100;
+  z-index: 2;
+
+  @include desktop {
+    height: $option-height-desktop;
+  }
+}
+
+.line {
+  position: absolute;
+  top: calc(($option-height-mobile / 2) - 0.5px);
+  width: 100%;
+  height: 1px;
+  background-color: $black-40;
+  z-index: 1;
+
+  @include desktop {
+    top: calc(($option-height-desktop / 2) - 0.5px);
+  }
+}
+
+.optionText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  width: 100%;
+  z-index: 3;
+  font-size: 14px;
+  font-weight: 400;
+  color: $black-100;
+}

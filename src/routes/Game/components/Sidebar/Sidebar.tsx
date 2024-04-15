@@ -4,6 +4,8 @@ import cx from 'classnames';
 import { useGame } from '@/hooks/useGame';
 import { USDFormatter } from '@/utils/currency';
 
+import ScoreOption from '@/components/ScoreOption';
+
 import styles from './Sidebar.module.scss';
 
 type Props = {
@@ -16,15 +18,13 @@ function Sidebar({ className }: Props) {
     return (
         <section className={cx(styles.root, className)}>
             {game.questions.map(({ id, score }, index) => (
-                <div
+                <ScoreOption
                     key={id}
-                    className={cx(styles.scoreItem, {
-                        [styles.active]: game.currentQuestionIndex === index,
-                        [styles.inactive]: game.currentQuestionIndex > index,
-                    })}
+                    active={game.currentQuestionIndex === index}
+                    inactive={game.currentQuestionIndex > index}
                 >
                     {USDFormatter(score)}
-                </div>
+                </ScoreOption>
             ))}
         </section>
     );
