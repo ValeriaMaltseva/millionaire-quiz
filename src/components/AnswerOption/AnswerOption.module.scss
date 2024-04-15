@@ -21,6 +21,7 @@ $option-line-width: 17px;
   outline: none;
   border: none;
   background: none;
+  -webkit-tap-highlight-color: transparent;
 
   &:hover {
     path {

@@ -13,8 +13,7 @@ type Props = React.PropsWithChildren<{
 
 const ScoreOption = ({ active, inactive, children }: Props) => {
     return (
-        <button
-            type="button"
+        <div
             className={cx(styles.root, {
                 [styles.active]: active,
                 [styles.inactive]: inactive,
@@ -23,7 +22,7 @@ const ScoreOption = ({ active, inactive, children }: Props) => {
             <OptionIcon className={styles.option} />
             <div className={styles.line} />
             <div className={styles.optionText}>{children}</div>
-        </button>
+        </div>
     );
 };
 

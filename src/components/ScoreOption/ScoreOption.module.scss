@@ -7,10 +7,9 @@ $option-height-desktop: 40px;
 
 .root {
   position: relative;
+  display: flex;
+  justify-content: center;
   width: 100%;
-  outline: none;
-  border: none;
-  background: none;
   font-size: 0;
 
   &.active {
